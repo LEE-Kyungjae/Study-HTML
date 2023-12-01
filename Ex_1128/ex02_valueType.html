@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js의 자료형</title>
+		<script>
+		//js의 자료형 : var - 보안성이 떨어짐, 
+		//			const - 상수형태의 자료형,
+		//			let - 	가장 많이 사용되는 자료형
+		
+		let a1 = 100.2;
+		let a2 = 2;
+		
+		a1 = "hi";
+		a2 = true;
+		let result = a1 +a2;
+		document.write("res : ", result);
+		
+		document.write("<hr>");
+		
+		let a = 10;
+		let b = 3;
+		result = a/b;
+		document.write("a / b : " + result, "<br>");
+		document.write("a / b의 소수점 끊기 : " + result.toFixed(2) + "<br>");
+		result = a%b;
+		document.write("a % b : " + result);
+		</script>		
+	</head>
+	<body>
+
+	</body>
+</html>

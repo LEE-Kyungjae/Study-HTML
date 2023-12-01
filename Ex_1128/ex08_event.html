@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>함수와 이벤트</title>
+		<script>
+		
+			function test1(){
+				//alert("버튼1 클릭됨");
+				//함수가 호출되면 사용하고자 하는 태그를 검색
+				let mp = document.getElementById("myp");
+				mp.innerHTML = "버튼1클릭완료";
+			}
+			function test2(){
+				let input = document.getElementById("myinput");
+				let msg = input.value;
+				let myp = document.getElementById("myp");
+				myp.innerHTML=msg;
+				let res = document.getElementById("res");
+				res.value=msg;
+			}
+			function send(n,s){
+				//alert(n + " / " +s);
+				let div = document.getElementById("div");
+				div.innerHTML = n + " / " + s;
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="버튼1" onclick="test1();">
+		<br>
+		<!-- <input type = "text"> -->
+		<input type="password" id="myinput" placeholder="input text">
+		<input type="button" value="확인" onclick="test2();">
+		
+		<p id="myp">before</p>
+		<input id="res">
+		<hr>
+		<input id="num" placeholder="input number" value="">
+		<input type="button" value="결과확인" onclick="send(1, 'hi');">
+		<div id = "div">
+		</div>
+		<hr>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>font</title>
+		
+		<style>
+			.a1{font-size: 20px;}
+			.a2{font-style:italic;}
+			.a3{font-weight: bold;}
+			.a4{font-family: "궁서체","gulim", "돋움";}
+			.a5{font-variant: small-caps;}
+			
+			/* bold속성 사용을 위해서는 반드시 글꼴이 함께 정의되어 있어야한다. */
+			/* .a6{font:bold 20px "gulim";} */
+			
+			/* 단축코드 사용시 반드시 순서를 지켜줘야 한다
+				weight, style, small-caps, size, family, background */
+			.a6{font:bold italic small-caps 25px "궁서","돋움"; 
+				background: yellow;}
+			
+		</style>
+		
+	</head>
+	<body>
+		<p class="a1">글자크기</p>
+		<p class="a2">글자 스타일</p>
+		<p class="a3">글자 두께</p>
+		<p class="a4">글꼴</p>
+		<p class="a5">The end</p>
+		<p class="a6">단축코드 적용시 접근 순서</p>
+	</body>
+</html>

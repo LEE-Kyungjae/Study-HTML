@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form태그로 서버에 값 전달하기,form태그 검색하기</title>
+		<script>
+			function check(){
+				let f =document.forms[1];
+				
+				//f라는 이름을 가진 form태그에서
+				//name이 id로 설정된 태그의 실제 값
+				let id = f.id.value;
+				let pwd = f.pwd.value;
+				let name = f.pwd.value;
+				
+				if(id == ''){
+					alert("아이디 입력해야함");
+					return;
+				}
+				if(pwd == ''){
+					alert("비밀번호 입력해야함");
+					return;
+				}			
+				//form태그에 속성을 추가
+				//전송방식 : GET - url에 파라미터를 노출(속도가 빠름, 보안이 취약)
+				//		  POST - url에 파라미터를 노출하지 않는다(속도가 느림, 보안이 좋다)
+				f.method = "GET";//전송방식
+				f.action = "login.jsp";//전송할 페이지
+				f.submit();//전송
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form></form>
+		<form>
+			<table border="1">
+				<tr>
+					<th>아이디</th>
+					<!-- name속성 : 서버로 전달될 값. 중복불가 -->
+					<td><input name="id"></td>
+				</tr>
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="pwd"></td>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td><input name="name"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="전송" onclick="check();">
+					</td>
+				</tr>
+
+			</table>
+		
+		</form>
+	</body>
+</html>

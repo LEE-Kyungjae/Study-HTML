@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>계산기 만들기</title>
+		<script>
+			function num(sign){
+			let su1 =document.getElementById("su1").value;
+			let su2 =document.getElementById("su2").value;
+			//유효성(무결성)체크
+			
+			let num_pattern = /^[0-9]+$/;
+			if(!num_pattern.test(su1)||!num_pattern.test(su2)){
+				alert("값은 정수로 입력하세요");
+				return;
+			}
+			let result = document.getElementById("result");
+			let str =0;
+				switch(sign){
+				case "+":
+					res=Number(su1)+Number(su2);
+					break;
+				case "-":
+					res=su1-su2;
+					break;
+				case "*":
+					res=su1*su2;
+					break;
+				case "/":
+					res=su1/su2;
+					res = su2 == 0 ? "0으로는 나눌 수 없어요" :(su1/su2).toFixed(2);
+					break;
+				}//switch
+					result.value =res;
+				
+			}		
+		</script>
+	</head>
+	
+	<body>
+		<table border="1">
+			<tr>
+				<th>수1</th>
+				<td><input id = "su1">
+				</td>
+			</tr>
+			<tr>
+				<th>수2</th>
+				<td><input id = "su2"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type = "button" value = "+" onclick = "num('+');">
+					<input type = "button" value = "-" onclick = "num('-');">
+					<input type = "button" value = "*" onclick = "num('*');">
+					<input type = "button" value = "/" onclick = "num('/');">
+				</td>
+			</tr>
+			<tr>
+				<th>결과</th>
+				<td><input id="result"></td>
+			</tr>
+		</table>
+	</body>
+</html>

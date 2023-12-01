@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이미지 갤러리</title>
+		<style>
+		a{text-decoration: none;}
+		</style>
+		<script>
+			let num = 1;
+			let path = "image/img";
+			function next(){
+				num++;
+				if(num ==8){
+					num=1;
+				}
+				let img = document.getElementById("gallery");
+				// "image/img"+2
+				img.src = path + num + ".jpg";
+			}
+			function prev(){
+				num--;
+				if(num==0){
+					num=7;
+				}
+				let img = document.getElementById("gallery");
+				img.src = path + num + ".jpg";
+			}
+			//1초 간격으로 자동으로 next()함수 호출
+			setInterval("next()",500);
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<!-- a태그에 onclick속성을 적용하려면 반드시 href="#"속성이 필요하다 -->
+			<a href="#" onclick="prev();">
+				<img alt="이전" src="image/left_btn.png">
+			</a>
+				<img src="image/img1.jpg" id="gallery" width="300" height="200">
+			<a href="#" onclick="next();">
+				<img alt="이전" src="image/right_btn.png">
+			</a>
+				
+		</div>
+		
+	</body>
+</html>

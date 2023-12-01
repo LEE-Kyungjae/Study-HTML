@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form태그 검색하기2</title>
+		<script>
+			function check(){
+				//ff라는 name속성을 가진 form을 가져온다.
+				let f = document.ff;
+				
+				let id = f.id.value;
+				if(id == ''){
+					alert("아이디를 입력해주시오");
+					f.id.focus();//커서이동
+					return;
+				}
+				f.method ="GET";
+				f.action ="login.jsp";
+				f.submit();
+			}
+		</script>
+	</head>
+	<body>
+		<form name = "ff">
+			<table border="1">
+				<tr>
+					<th>아이디</th>
+					<!-- name속성 : 서버로 전달될 값. 중복불가 -->
+					<td><input name="id"></td>
+				</tr>
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="pwd"></td>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td><input name="name"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="전송" onclick="check();">
+					</td>
+				</tr>
+
+			</table>
+		
+		</form>
+	</body>
+</html>

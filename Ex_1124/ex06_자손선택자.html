@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자손선택자</title>
+		<style>
+			/* 해당 아이디나 클래스를 가진 태그의 모든 하위요소들에게 속성을 적용 */
+			#header h1 {color:red;}
+			#section h1 {color:blue;}
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id = "header">
+			<h1>Header Test</h1>
+			<div id="nav">
+				<h1>Navigation Test</h1>
+			</div>
+		
+			<div id="nav">
+				<h1>Navigation Test</h1>
+			</div>
+		</div><!-- header -->
+		<div id = "content">
+			<h1>Content Test</h1>
+			<p>Test complete</p>
+		
+		</div>
+	</body>
+</html>

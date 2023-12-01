@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form태그 검색하기3</title>
+		<script>
+			function check(f){
+				f.submit();
+			}
+		</script>
+	</head>
+	<body>
+		<form method="GET" action="login.jsp">
+			<table border="1">
+				<tr>
+					<th>아이디</th>
+					<!-- name속성 : 서버로 전달될 값. 중복불가 -->
+					<td><input name="id"></td>
+				</tr>
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="pwd"></td>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td><input name="name"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+					<!-- this.form : this(현재 버튼객체)를 포장하고 있는 form태그를 인자로 전달 
+					this.form만 존재하며, this.a,this.table..등은 사용 불가	-->
+						<input type="button" value="전송" onclick="check(this.form);">
+						<!-- this.form은 input,textarea, select등의
+						 정해진 태그에서만 사용이 가능하다 -->
+						<!-- <a href="#" onclick="send(this.form);">네이버</a> -->
+					</td>
+				</tr>
+
+			</table>
+		
+		</form>		
+	</body>
+</html>

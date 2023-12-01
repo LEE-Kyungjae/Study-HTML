@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>클래스를 통해 css정의</title>
+		<style>
+			/* .을 통해 특정 클래스로 접근 */
+			.text2{color:#f00;}
+			/*  p태그중에 클래스명이 text인 요소(태그)를 찾으시오 */
+			p.text{color:green;}
+			h2.text{color:blue;}
+			
+			/* div h2{color:aqua;} */
+			.box h2{color:aqua;}
+			.box2 span{color:red;}
+			h2 span.sblue{color:blue;}
+		</style>
+		
+	</head>
+	<body>
+	<!-- class : 태그에 이름을 붙여 구별할 수 있도록 하는 속성(중복가능) -->
+		<h2 class="text">클래스 연습</h2>
+		
+		<p class="text2">
+			개구장이 뽀로로 장난꾸러기 크롱 우람한 포비 조그만 해리도 사이좋은 친구죠
+		</p>
+		<p class="text">
+			영리한 에디 우직한 로디 수줍은 루피 발랄한 패티도 사이좋은 친구죠
+		</p>
+		<hr>
+		<div class="box">
+			<h2><span>클래스</span> 연습중</h2>
+			<div class="box2">
+				<h2><span>클래스</span> 연습중 2</h2>
+			</div>
+		</div>
+		<h2>클래스 <span class = "sblue">연습중3</span></h2>
+		
+	</body>
+</html>

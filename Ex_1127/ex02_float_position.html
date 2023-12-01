@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float 사용하기</title>
+		<style>
+			*{margin: 0; padding: 0;}
+			#wrap{	margin : 0 auto;
+					width: 500px;
+					background: black;
+					border: 5px solid #f00;}
+			header{	width : 500px;
+					background:#09f;
+					margin-bottom: 10px;
+					text-align: center;
+					padding: 10px 0;
+					color: white;}
+					
+			footer{	width : 500px;
+					background:#09f;
+					margin-bottom: 10px;
+					text-align: center;
+					padding: 10px 0;
+					color: white;}
+			section{overflow:hidden;}
+			#left{	float:left;
+					width:180px;
+					background:#fcf;
+					height:200px;
+					margin-bottom:10px;}
+			#right{	float:right;
+					width:180px;
+					background:#fcf;
+					height:200px;
+					margin-bottom:10px;}
+					
+		</style>
+	</head>
+	<body>
+		<div id = "wrap">
+			<header>
+				<p>float 연습 header</p>
+			</header>
+			<section>
+				<div id = "left">
+					<p>float연습 left로 갈 예정
+						<br>두 줄 이상 작성해도 무관</p>
+				</div>
+				<div id = "right">
+					<p>float연습 right로 갈 예정
+						<br>두 줄 이상 작성해도 무관</p>
+				</div>
+			</section>
+			<footer>
+				<p>float 연습 footer</p>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>z-index</title>
+		<style>
+			*{	margin:0; padding:0;}
+			p{	border: 1px solid black;
+			  	width:80px;
+				height:80px;
+				padding:10px;
+				position:absolute;}
+
+				/* z-index값이 작을수록 브라우저 위에 보여진다 */
+			.b1{background:yellow;
+				position:absolute;/* body기준 0,0자리에 배치 */
+				z-index:3;}
+			.b2{background:orange;
+				position:absolute;
+				left: 20px; top:20px;
+				z-index: 2;}
+			.b3{background:teal;
+				position:absolute;
+				left: 40px; top:40px;
+				z-index: 1;}
+			
+		</style>
+	</head>
+	<body>
+		<p class ="b1">박스1</p>
+		<p class ="b2">박스2</p>
+		<p class ="b3">박스3</p>
+		
+	</body>
+</html>

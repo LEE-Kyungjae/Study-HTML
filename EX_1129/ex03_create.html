@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<script>
+		let_sido_arr = ['서울','경기','인천'];
+		//현재 페이지가 로드될 때 자동으로 가장 먼저 호출되는 메서드
+		window.onload = function(){
+			//alert("호출됨");
+			let sido = document.getElementById("sido");
+			
+			//sido태그에 <option>을 추가
+			for(let i = 0; i<sido_arr.length; i++){
+				let opt = document.createElement("option");
+				opt.innerHTML = sido_arr[i];
+				//sido라는 id를 가진 select 태그에 option태그를 추가
+				sido.appendChild(opt);
+			}//for
+		}
+	</script>	
+		
+	</head>
+	<body>
+		지역:<select id="sido">
+				<option>:::사는지역:::</option>
+				</select>
+	</body>
+</html>

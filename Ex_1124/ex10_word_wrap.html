@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>word wrap</title>
+		
+		<style>
+			div {width:100px;
+				 padding:10px;
+				 border:1px solid red;
+				 margin-bottom:10px;}
+				 
+			.ww{word-wrap:break-word;}
+		</style>
+		
+	</head>
+	<body>
+		<div>
+			이 문장은 매우 긴 영단어를 포함하고 있습니다
+			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			자 이제 어떻게 되나 한번 보자
+		</div>
+		<div class="ww">
+			이 문장은 매우 긴 영단어를 포함하고 있습니다
+			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			자 이제 어떻게 되나 한번 보자
+		</div>
+	</body>
+</html>

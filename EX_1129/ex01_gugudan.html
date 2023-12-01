@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>구구단</title>
+		<style>
+			#disp{width: 200px; height:200px;
+				background:yellow;		
+			}
+		</style>
+		<script>
+			function gugu(){
+				//입력상자 단에 담긴 값을 가져온다.
+				let dan =  document.getElementById("dan").value;
+				//유효성 체크
+				dan=dan.trim();
+				if(dan == ''){
+					alert("값을 입력하세요");
+					return;
+				}
+				let number = /^[0-9]+$/;
+				if(!number.test(dan)){
+					alert("정수가 아님");
+					return;
+				}
+				
+				if(dan < 2 || dan > 9){
+					alert("2~9사이의 값을 입력하세요");
+					return;
+				}
+				let str = "";
+				for (let i = 1; i <= 9; i++) {
+					str += dan + " * " + i + " = " + (dan * i) + "<br>";
+				}
+				let disp = document.getElementById("disp");
+				disp.innerHTML = str;
+			}
+			
+			let b_show = true;
+			function show(){
+				b_show = !b_show;
+				let btn = document.getElementById("btn_show");
+				btn.value = b_show ? '숨기기' : '보이기';
+				let disp = document.getElementById("disp");
+				disp.style.display = b_show? 'block': 'none';
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		<input id = "dan">
+		<input type="button" value="OK" onclick="gugu();">
+		<input type="button" value="숨기기" id = "btn_show" onclick="show();">
+		<br>
+		<div id = "disp"></div>
+	</body>
+</html>

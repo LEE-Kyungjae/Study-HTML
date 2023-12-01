@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float(왼쪽, 오른쪽 정렬)</title>
+		<style>
+			*{	margin: 0;
+				padding: 0;}
+			#container{	margin: 10px auto;
+						width: 500px;
+						padding: 10px;
+						background: #fdd;
+						border: 5px solid #caa;
+						overflow: hidden;}/* float의 해제 */
+			h1{	text-align:center;
+				margin-bottom: 10px;}
+				
+				/* float속성을 사용하면 '부유하다'의 의미로 부모영역에 영향을 받지 않는 구조가 된다
+				그러므로 이를 해결하기 위해 부모클래스에서 
+				overflow:hidden을 통해 float을 해제(부모의 자식으로 인지) */
+			.d1{width: 200px;
+				height: 100px;
+				background: #dda;
+				float: left;}
+			.d2{width: 200px;
+				height: 100px;
+				background: #ba7;
+				float: right;}
+				
+		</style>
+	</head>
+	<body>
+		<div id = "container">
+			<h1>띠띠뽀 띠띠뽀</h1>
+			
+			<div class = "d1">
+				꼬마기차 띠띠뽀
+				언제나 즐거운 꼬마기차 띠띠뽀
+				달려요 뚜뚜루뚜뚜 띠띠뽀
+			</div>
+			<div class = "d2">
+				꼬마기차 띠띠뽀
+				언제나 즐거운 꼬마기차 띠띠뽀
+				달려요 뚜뚜루뚜뚜 띠띠뽀
+			</div>
+		</div>
+	</body>
+</html>
